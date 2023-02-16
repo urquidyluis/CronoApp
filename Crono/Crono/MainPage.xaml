@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crono.MainPage">
+
+    <StackLayout >
+        <!--<Image Source="" />-->
+        <Frame BackgroundColor="#2196F3" Padding="15" CornerRadius="0">
+            <Label Text="Crono Arbitros LM" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Orientation="Horizontal">
+            <Label  Text="Hora Actual: " />
+            <Label FontAttributes="Bold" Text="-" x:Name="etiquetaHoraActual"/>
+            <Label Margin="50,0,0,0"  Text="Tiempo corrido: " />
+            <Label FontAttributes="Bold" Text="-" x:Name="etiquetaHoraJuego" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Orientation="Vertical" Margin="0,0,50,0">
+                <Label x:Name="etiquetaCuarenta" FontSize="40" Text="40"></Label>
+                <Button x:Name="btn40" Clicked="btn40_Clicked" Text="40"/>
+                <Label x:Name="etiquetaVeinti" FontSize="40" Text="25"></Label>
+                <Button x:Name="btn25" Clicked="btn25_Clicked" Text="25"/>
+            </StackLayout>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Tiempo: " FontSize="25"/>
+                    <Entry x:Name="t_hora" Keyboard="Numeric" Placeholder="HH" FontAttributes="Bold" FontSize="50" />
+                    <Entry x:Name="t_minu" Keyboard="Numeric" Placeholder="MM" FontAttributes="Bold" FontSize="50" />
+                    <Entry x:Name="t_segu" Keyboard="Numeric" Placeholder="SS" FontAttributes="Bold" FontSize="50" />
+                    <Entry x:Name="t_mili" Keyboard="Numeric" Placeholder="mm" FontAttributes="Bold" FontSize="50" />
+                    <!--<Button x:Name="checkTiempo" Clicked="checkTiempo_Clicked" Text="Check" CornerRadius="10"></Button>-->
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Button Text="Iniciar / Detener "
+                    TextTransform="None"
+                    CornerRadius="10"
+                    FontSize="50"
+                    x:Name="btnIniciar" 
+                    Clicked="btnIniciar_Clicked" />
+                    <Button Text="Reset "
+                    TextTransform="None"
+                    CornerRadius="10"
+                    x:Name="btnReset" 
+                    Clicked="btnReset_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Restante: " FontSize="25"/>
+                    <Entry x:Name="r_hora" Keyboard="Numeric" Placeholder="HH" FontAttributes="Bold" FontSize="50" />
+                    <Entry x:Name="r_minu" Keyboard="Numeric" Placeholder="MM" FontAttributes="Bold" FontSize="50" />
+                    <Entry x:Name="r_segu" Keyboard="Numeric" Placeholder="SS" FontAttributes="Bold" FontSize="50" />
+                    <Entry x:Name="r_mili" Keyboard="Numeric" Placeholder="mm" FontAttributes="Bold" FontSize="50" />
+                    <!--<Button x:Name="checkRestante" Clicked="checkRestante_Clicked" Text="Check" CornerRadius="10"></Button>-->
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="50,-15,0,0">
+                <Button x:Name="btn1" Clicked="btn1_Clicked" Text="1" class="bt1"/>
+                <Button x:Name="btn2" Clicked="btn2_Clicked" Text="2" />
+                <Button x:Name="btn3" Clicked="btn3_Clicked" Text="3" />
+                <Button x:Name="btn4" Clicked="btn4_Clicked" Text="4" />
+                <Button x:Name="btnk" Clicked="btnk_Clicked" Text="Kick" />
+            </StackLayout>
+        </StackLayout>
+
+
+        <!--<Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>-->
+    </StackLayout>
+
+</ContentPage>
